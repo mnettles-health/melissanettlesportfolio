@@ -4,6 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Melissa Nettles | Healthcare Operations & Program Management</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Melissa Nettles — Healthcare Operations & Program Management Leader specializing in value-based care, NCQA/PCMH, workflow optimization, and cross-functional program execution.">
+  <meta property="og:title" content="Melissa Nettles | Healthcare Operations Leader">
+  <meta property="og:description" content="15+ years improving healthcare operations, quality, and program performance.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="melissa-headshot.jpg">
+
   <style>
     :root {
       --navy:   #0f2744;
@@ -30,7 +38,7 @@
       line-height: 1.65;
     }
 
-    /* ─── NAV ─── */
+    /* NAV */
     nav {
       position: fixed; top: 0; left: 0; width: 100%; z-index: 100;
       background: rgba(15,39,68,.96);
@@ -49,7 +57,7 @@
     }
     .nav-links a:hover { color: var(--accent); }
 
-    /* ─── HERO ─── */
+    /* HERO */
     .hero {
       min-height: 100vh;
       background: linear-gradient(135deg, var(--navy) 0%, #1a4a6e 55%, var(--teal) 100%);
@@ -57,26 +65,21 @@
       padding: 7rem 2.5rem 4rem;
       position: relative; overflow: hidden;
     }
-    .hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse at 80% 50%, rgba(26,125,140,.3) 0%, transparent 70%);
-    }
     .hero-inner {
       max-width: 1100px; margin: 0 auto;
       display: flex; align-items: center; gap: 4rem;
-      position: relative; z-index: 1;
       flex-wrap: wrap;
+      position: relative; z-index: 1;
     }
     .hero-avatar {
       width: 220px; height: 220px; flex-shrink: 0;
       border-radius: 50%;
       border: 5px solid var(--accent);
       box-shadow: 0 0 0 10px rgba(232,160,32,.15), var(--shadow);
-      background: linear-gradient(135deg, #1a7d8c 0%, #0f2744 100%);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 5rem; color: rgba(255,255,255,.9);
       overflow: hidden;
+    }
+    .hero-avatar img {
+      width: 100%; height: 100%; object-fit: cover; object-position: top;
     }
     .hero-text { flex: 1; min-width: 280px; }
     .hero-badge {
@@ -100,9 +103,9 @@
       display: flex; align-items: center; gap: .45rem;
       color: rgba(255,255,255,.8); font-size: .9rem;
     }
-    .hero-contact-item svg { color: var(--accent); flex-shrink: 0; }
-    .hero-contact-item a { color: inherit; text-decoration: none; transition: color .2s; }
+    .hero-contact-item a { color: inherit; text-decoration: none; }
     .hero-contact-item a:hover { color: var(--accent); }
+
     .hero-cta {
       display: inline-flex; align-items: center; gap: .5rem;
       background: var(--accent); color: var(--navy);
@@ -110,10 +113,11 @@
       font-weight: 700; font-size: .95rem; text-decoration: none;
       box-shadow: 0 4px 18px rgba(232,160,32,.35);
       transition: transform .2s, box-shadow .2s;
+      margin-right: 1rem;
     }
-    .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(232,160,32,.45); }
+    .hero-cta:hover { transform: translateY(-2px); }
 
-    /* ─── SECTIONS ─── */
+    /* SECTIONS */
     section { padding: 5rem 2.5rem; }
     .section-inner { max-width: 1100px; margin: 0 auto; }
     .section-label {
@@ -122,8 +126,7 @@
       letter-spacing: .1em; text-transform: uppercase; margin-bottom: .75rem;
     }
     .section-label::before {
-      content: ''; display: block;
-      width: 28px; height: 3px;
+      content: ''; width: 28px; height: 3px;
       background: var(--teal); border-radius: 2px;
     }
     h2.section-title {
@@ -132,62 +135,15 @@
     }
     .section-sub { color: var(--gray); margin-bottom: 3rem; max-width: 620px; }
 
-    /* ─── ABOUT ─── */
+    /* ABOUT */
     #about { background: var(--white); }
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
     @media (max-width: 720px) { .about-grid { grid-template-columns: 1fr; } }
-    .about-summary { font-size: 1rem; color: var(--text); line-height: 1.8; }
-    .about-summary p { margin-bottom: 1rem; }
-    .highlight-box {
-      background: linear-gradient(135deg, #e8f4f8, #f0fafb);
-      border-left: 4px solid var(--teal);
-      border-radius: 0 12px 12px 0;
-      padding: 1.4rem 1.6rem;
-      margin-top: 1.5rem;
-    }
-    .highlight-box h4 { color: var(--navy); font-size: .95rem; margin-bottom: .6rem; }
-    .highlight-box ul { list-style: none; padding: 0; }
-    .highlight-box li {
-      color: var(--text); font-size: .9rem; padding: .3rem 0;
-      display: flex; align-items: center; gap: .6rem;
-    }
-    .highlight-box li::before {
-      content: '✦'; color: var(--teal); font-size: .65rem; flex-shrink: 0;
-    }
-    .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
-    .stat-card {
-      background: var(--light); border-radius: 12px;
-      padding: 1.4rem; text-align: center;
-      border: 1px solid var(--border);
-    }
-    .stat-number {
-      font-size: 2.4rem; font-weight: 800;
-      color: var(--teal); line-height: 1;
-    }
-    .stat-label { font-size: .82rem; color: var(--gray); margin-top: .35rem; }
 
-    /* ─── COMPETENCIES ─── */
+    /* COMPETENCIES */
     #skills { background: var(--light); }
-    .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.4rem; }
-    .skill-card {
-      background: var(--white); border-radius: 14px;
-      padding: 1.6rem; border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      display: flex; align-items: flex-start; gap: 1rem;
-      transition: transform .2s, box-shadow .2s;
-    }
-    .skill-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(15,39,68,.13); }
-    .skill-icon {
-      width: 48px; height: 48px; flex-shrink: 0;
-      background: linear-gradient(135deg, var(--teal), var(--teal-lt));
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.4rem;
-    }
-    .skill-card h4 { font-size: .95rem; font-weight: 700; color: var(--navy); margin-bottom: .3rem; }
-    .skill-card p { font-size: .85rem; color: var(--gray); }
 
-    /* ─── EXPERIENCE ─── */
+    /* EXPERIENCE — UPDATED WITH YOUR RESUME BULLETS */
     #experience { background: var(--white); }
     .timeline { position: relative; padding-left: 2rem; }
     .timeline::before {
@@ -195,18 +151,17 @@
       left: .55rem; top: 0; bottom: 0; width: 2px;
       background: linear-gradient(to bottom, var(--teal), transparent);
     }
-    .tl-item { position: relative; margin-bottom: 2.8rem; }
+    .tl-item { margin-bottom: 2.8rem; position: relative; }
     .tl-dot {
       position: absolute; left: -1.75rem; top: .35rem;
       width: 14px; height: 14px; border-radius: 50%;
       background: var(--teal); border: 3px solid var(--white);
-      box-shadow: 0 0 0 2px var(--teal);
     }
     .tl-card {
       background: var(--light); border-radius: 14px;
       padding: 1.6rem 1.8rem; border: 1px solid var(--border);
     }
-    .tl-header { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: space-between; margin-bottom: .6rem; }
+    .tl-header { display: flex; justify-content: space-between; margin-bottom: .6rem; }
     .tl-role { font-size: 1.05rem; font-weight: 700; color: var(--navy); }
     .tl-date {
       background: rgba(26,125,140,.1); color: var(--teal);
@@ -217,46 +172,16 @@
     .tl-bullets { list-style: none; padding: 0; }
     .tl-bullets li {
       font-size: .9rem; color: var(--text);
-      padding: .3rem 0; display: flex; align-items: flex-start; gap: .6rem;
+      padding: .3rem 0; display: flex; gap: .6rem;
     }
-    .tl-bullets li::before { content: '→'; color: var(--teal); flex-shrink: 0; font-weight: 700; }
+    .tl-bullets li::before { content: '→'; color: var(--teal); font-weight: 700; }
 
-    /* ─── PROJECTS ─── */
+    /* PROJECTS */
     #projects { background: var(--light); }
-    .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.8rem; }
-    .project-card {
-      background: var(--white); border-radius: 16px;
-      overflow: hidden; border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      transition: transform .25s, box-shadow .25s;
-    }
-    .project-card:hover { transform: translateY(-6px); box-shadow: 0 12px 36px rgba(15,39,68,.14); }
-    .project-banner {
-      height: 8px;
-      background: linear-gradient(90deg, var(--navy), var(--teal));
-    }
-    .project-body { padding: 1.6rem; }
-    .project-tag {
-      display: inline-block;
-      background: rgba(26,125,140,.1); color: var(--teal);
-      border-radius: 6px; padding: .2rem .6rem;
-      font-size: .75rem; font-weight: 600; margin-bottom: .8rem;
-      text-transform: uppercase; letter-spacing: .05em;
-    }
-    .project-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: .75rem; }
-    .project-card p { font-size: .88rem; color: var(--gray); line-height: 1.7; margin-bottom: 1rem; }
-    .project-pills { display: flex; flex-wrap: wrap; gap: .5rem; }
-    .pill {
-      background: var(--light); color: var(--navy);
-      border: 1px solid var(--border);
-      border-radius: 999px; padding: .2rem .7rem;
-      font-size: .75rem; font-weight: 500;
-    }
 
-    /* ─── TECH SKILLS ─── */
+    /* TECH */
     #tech { background: var(--navy); padding: 4rem 2.5rem; }
     #tech .section-label { color: var(--teal-lt); }
-    #tech .section-label::before { background: var(--teal-lt); }
     #tech h2.section-title { color: var(--white); }
     #tech .section-sub { color: rgba(255,255,255,.6); }
     .tech-cats { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.4rem; }
@@ -264,8 +189,7 @@
       background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
       border-radius: 14px; padding: 1.4rem;
     }
-    .tech-cat h4 { color: var(--accent); font-size: .85rem; font-weight: 700;
-      text-transform: uppercase; letter-spacing: .08em; margin-bottom: .9rem; }
+    .tech-cat h4 { color: var(--accent); font-size: .85rem; font-weight: 700; margin-bottom: .9rem; }
     .tech-tags { display: flex; flex-wrap: wrap; gap: .5rem; }
     .tech-tag {
       background: rgba(255,255,255,.1); color: rgba(255,255,255,.85);
@@ -273,77 +197,20 @@
       font-size: .82rem; font-weight: 500;
     }
 
-    /* ─── EDUCATION & CERTS ─── */
-    #education { background: var(--white); }
-    .edu-certs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
-    @media (max-width: 680px) { .edu-certs-grid { grid-template-columns: 1fr; } }
-    .edu-item, .cert-item {
-      display: flex; gap: 1.2rem; align-items: flex-start;
-      padding: 1.2rem; border-radius: 12px;
-      background: var(--light); border: 1px solid var(--border);
-      margin-bottom: 1rem;
-    }
-    .edu-icon {
-      width: 44px; height: 44px; flex-shrink: 0; border-radius: 10px;
-      background: linear-gradient(135deg, var(--navy), var(--teal));
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.2rem;
-    }
-    .edu-item h4, .cert-item h4 { font-size: .95rem; font-weight: 700; color: var(--navy); margin-bottom: .2rem; }
-    .edu-item p, .cert-item p { font-size: .85rem; color: var(--gray); }
-
-    /* ─── CONTACT ─── */
+    /* CONTACT */
     #contact {
-      background: linear-gradient(135deg, var(--navy) 0%, #1a4a6e 60%, var(--teal) 100%);
+      background: linear-gradient(135deg, var(--navy), var(--teal));
       padding: 5rem 2.5rem;
     }
-    #contact .section-label { color: var(--teal-lt); }
-    #contact .section-label::before { background: var(--teal-lt); }
-    #contact h2.section-title { color: var(--white); }
-    #contact .section-sub { color: rgba(255,255,255,.7); }
-    .contact-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.4rem; }
-    .contact-card {
-      background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15);
-      border-radius: 14px; padding: 1.6rem;
-      display: flex; flex-direction: column; align-items: center; text-align: center; gap: .6rem;
-      transition: background .2s;
-    }
-    .contact-card:hover { background: rgba(255,255,255,.14); }
-    .contact-card-icon {
-      width: 52px; height: 52px; border-radius: 50%;
-      background: rgba(232,160,32,.18); border: 2px solid rgba(232,160,32,.35);
-      display: flex; align-items: center; justify-content: center; font-size: 1.4rem;
-    }
-    .contact-card h4 { color: var(--accent); font-size: .82rem; font-weight: 700;
-      text-transform: uppercase; letter-spacing: .08em; }
-    .contact-card p, .contact-card a {
-      color: rgba(255,255,255,.85); font-size: .9rem; text-decoration: none; word-break: break-all;
-    }
-    .contact-card a:hover { color: var(--accent); }
 
-    /* ─── FOOTER ─── */
     footer {
       background: #0a1d35; color: rgba(255,255,255,.45);
       text-align: center; padding: 1.6rem 2rem;
       font-size: .82rem;
     }
-    footer span { color: var(--accent); }
-
-    /* ─── RESPONSIVE ─── */
-    @media (max-width: 820px) {
-      nav { padding: .75rem 1.25rem; }
-      .nav-links { gap: 1.2rem; }
-      section { padding: 3.5rem 1.25rem; }
-      .hero { padding: 6rem 1.25rem 3rem; }
-      .hero-inner { gap: 2rem; }
-      .hero-avatar { width: 160px; height: 160px; }
-    }
-    @media (max-width: 560px) {
-      .nav-links { display: none; }
-      .hero-avatar { width: 120px; height: 120px; font-size: 3.5rem; }
-    }
   </style>
 </head>
+
 <body>
 
 <!-- NAV -->
@@ -353,9 +220,8 @@
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Competencies</a></li>
     <li><a href="#experience">Experience</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#tech">Tech</a></li>
-    <li><a href="#education">Education</a></li>
+    <li><a href="#projects">Programs</a></li>
+    <li><a href="#tech">Tools</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -364,34 +230,23 @@
 <section class="hero" id="home">
   <div class="hero-inner">
     <div class="hero-avatar">
-      <!-- Profile photo placeholder — replace src with your image URL -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="90" height="90" fill="rgba(255,255,255,0.75)">
-        <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
-      </svg>
+      <img src="melissa-headshot.jpg" alt="Melissa Nettles headshot">
     </div>
+
     <div class="hero-text">
       <div class="hero-badge">Healthcare Program Manager</div>
       <h1>Melissa <span>Nettles</span></h1>
       <p class="hero-tagline">15+ years driving healthcare operations, value-based care, and cross-functional program excellence across clinical and administrative teams.</p>
+
       <div class="hero-contacts">
-        <div class="hero-contact-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Greensboro, NC
-        </div>
-        <div class="hero-contact-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
-          <a href="mailto:mnettles360@gmail.com">mnettles360@gmail.com</a>
-        </div>
-        <div class="hero-contact-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.08 4.18 2 2 0 015.08 2h3a2 2 0 012 1.72c.13 1.05.37 2.08.73 3.07a2 2 0 01-.45 2.11L9.09 10.17a16 16 0 006.72 6.72l1.27-1.27a2 2 0 012.11-.45c.99.36 2.02.6 3.07.73A2 2 0 0122 16.92z"/></svg>
-          336-339-1901
-        </div>
-        <div class="hero-contact-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          <a href="https://www.linkedin.com/in/melissa-n-9b666360" target="_blank">LinkedIn Profile</a>
-        </div>
+        <div class="hero-contact-item">Greensboro, NC</div>
+        <div class="hero-contact-item"><a href="mailto:mnettles360@gmail.com">mnettles360@gmail.com</a></div>
+        <div class="hero-contact-item">336-339-1901</div>
+        <div class="hero-contact-item"><a href="https://www.linkedin.com/in/melissa-n-9b666360" target="_blank">LinkedIn</a></div>
       </div>
-      <a href="#contact" class="hero-cta">Get In Touch ↓</a>
+
+      <a href="#contact" class="hero-cta">Get In Touch</a>
+      <a href="Melissa_Nettles_Resume.pdf" target="_blank" class="hero-cta">Download Résumé</a>
     </div>
   </div>
 </section>
@@ -402,109 +257,31 @@
     <p class="section-label">About Me</p>
     <h2 class="section-title">Healthcare Ops Leader</h2>
     <p class="section-sub">Building systems that improve outcomes for patients and organizations alike.</p>
+
     <div class="about-grid">
       <div>
-        <div class="about-summary">
-          <p>I'm a healthcare operations and program management professional with over 15 years of experience leading cross-functional initiatives across clinical, quality, and administrative teams.</p>
-          <p>My career spans value-based care and bundled payment programs, NCQA/PCMH accreditation cycles, and compliance-driven review processes. I'm skilled in requirements gathering, workflow documentation, vendor coordination, and KPI/dashboard reporting — translating complex data into actionable program decisions.</p>
-          <p>As a Six Sigma White Belt, I have a track record of process redesign that reduces variation and improves stakeholder outcomes.</p>
-        </div>
-        <div class="highlight-box">
-          <h4>Key Achievements at a Glance</h4>
-          <ul>
-            <li>Ortho Bundles — Coordinated multi-practice bundled payment value-based care program</li>
-            <li>THN Concierge Service Line — Led workflow redesign improving efficiency &amp; patient satisfaction</li>
-            <li>Ventricle Health — Managed vendor relationship for cardiovascular care coordination initiative</li>
-            <li>PCMH Lite — Guided practices through NCQA-aligned accreditation &amp; recertification</li>
-            <li>TOC Initiatives — Built reporting that strengthened Transition of Care performance measures</li>
-          </ul>
-        </div>
-      </div>
-      <div class="stat-grid">
-        <div class="stat-card">
-          <div class="stat-number">15+</div>
-          <div class="stat-label">Years in Healthcare Operations</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">260K</div>
-          <div class="stat-label">Patient Lives Managed in ACO</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">4+</div>
-          <div class="stat-label">Major Programs Led</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">10%</div>
-          <div class="stat-label">Target ED Diversion Reduction</div>
-        </div>
+        <p>I'm a healthcare operations and program management professional with over 15 years of experience leading cross-functional initiatives across clinical, quality, and administrative teams.</p>
+        <p>My career spans value-based care and bundled payment programs, NCQA/PCMH accreditation cycles, and compliance-driven review processes. I'm skilled in requirements gathering, workflow documentation, vendor coordination, and KPI/dashboard reporting — translating complex data into actionable program decisions.</p>
+        <p>As a Six Sigma White Belt, I have a track record of process redesign that reduces variation and improves stakeholder outcomes.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- COMPETENCIES -->
+<!-- CORE COMPETENCIES -->
 <section id="skills">
   <div class="section-inner">
     <p class="section-label">Core Competencies</p>
     <h2 class="section-title">What I Do Best</h2>
     <p class="section-sub">A blend of operational leadership, clinical knowledge, and data-driven decision-making.</p>
+
     <div class="skills-grid">
-      <div class="skill-card">
-        <div class="skill-icon">🏥</div>
-        <div>
-          <h4>Value-Based Care & Bundled Payment</h4>
-          <p>End-to-end program support for bundled payment and ACO initiatives, tracking quality measures and care transitions.</p>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">✅</div>
-        <div>
-          <h4>Quality & Compliance (NCQA/PCMH)</h4>
-          <p>Accreditation preparation, documentation oversight, and compliance verification for NCQA PCMH certification cycles.</p>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">🗂️</div>
-        <div>
-          <h4>Requirements & Workflow Documentation</h4>
-          <p>SOPs, process maps, and workflow documentation that standardize operations and reduce errors across teams.</p>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">⚡</div>
-        <div>
-          <h4>Process Improvement (Six Sigma White Belt)</h4>
-          <p>Data-driven process redesign that reduces variation, improves stakeholder outcomes, and drives efficiency gains.</p>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">🤝</div>
-        <div>
-          <h4>Cross-Functional & Vendor Management</h4>
-          <p>Structured stakeholder engagement across clinical, administrative, and community partners; external vendor coordination.</p>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">📊</div>
-        <div>
-          <h4>KPI Dashboards & Data Reporting</h4>
-          <p>Custom Excel and Power BI dashboards that monitor program performance, budget impacts, and operational trends.</p>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">🚀</div>
-        <div>
-          <h4>Platform Rollout & User Adoption</h4>
-          <p>Training, onboarding, and feedback collection that drives consistent workflow adoption across diverse teams.</p>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">⚖️</div>
-        <div>
-          <h4>MLR-Adjacent Review Cycles</h4>
-          <p>Medical/Legal/Regulatory review support, version control, document routing, and approval workflow management.</p>
-        </div>
-      </div>
+      <div class="skill-card"><div class="skill-icon">🏥</div><div><h4>Value-Based Care & Bundled Payment</h4></div></div>
+      <div class="skill-card"><div class="skill-icon">📊</div><div><h4>KPI Dashboards & Reporting</h4></div></div>
+      <div class="skill-card"><div class="skill-icon">🗂️</div><div><h4>Workflow Documentation</h4></div></div>
+      <div class="skill-card"><div class="skill-icon">⚡</div><div><h4>Process Improvement</h4></div></div>
+      <div class="skill-card"><div class="skill-icon">🤝</div><div><h4>Vendor Management</h4></div></div>
+      <div class="skill-card"><div class="skill-icon">⚖️</div><div><h4>MLR-Adjacent Review Cycles</h4></div></div>
     </div>
   </div>
 </section>
@@ -514,9 +291,10 @@
   <div class="section-inner">
     <p class="section-label">Professional Experience</p>
     <h2 class="section-title">Career Journey</h2>
-    <p class="section-sub">Over 15 years of progressive healthcare leadership across virtual, hybrid, and in-person environments.</p>
+
     <div class="timeline">
 
+      <!-- TELADOC -->
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-card">
@@ -524,291 +302,22 @@
             <span class="tl-role">Practice Coordinator</span>
             <span class="tl-date">Nov 2024 – Present</span>
           </div>
-          <div class="tl-company">Teladoc Health | Remote / Greensboro, NC</div>
+          <div class="tl-company">Teladoc Health — Remote</div>
           <ul class="tl-bullets">
-            <li>Manage multi-state provider operations, coordinating workflows, timelines, and deliverables across a high-volume virtual care environment</li>
-            <li>Track documentation completion, escalate compliance issues, and support structured review cycles mirroring MLR routing and version control</li>
-            <li>Facilitate cross-functional communication between physicians, Practice Directors, and operational teams</li>
-            <li>Produce operational dashboards, credentialing trackers, and status reports supporting leadership decision-making</li>
-            <li>Deliver platform training and onboarding support, improving workflow consistency and user adoption</li>
+            <li>Manage multi-state provider operations, coordinating workflows, timelines, and deliverables to ensure readiness and compliance across a high-volume virtual care environment.</li>
+            <li>Track documentation completion, escalate compliance issues, and support structured review cycles — mirroring MLR routing, version control, and approval workflows.</li>
+            <li>Facilitate cross-functional communication between physicians, Practice Directors, and operational teams to maintain alignment and resolve issues quickly.</li>
+            <li>Produce operational dashboards, credentialing trackers, and status reports that support leadership decision-making and program oversight.</li>
+            <li>Deliver platform training and onboarding support, improving workflow consistency and user adoption — including gathering user feedback ahead of rollout.</li>
           </ul>
         </div>
       </div>
 
+      <!-- THN MANAGER -->
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-card">
           <div class="tl-header">
-            <span class="tl-role">Manager, Patient &amp; Community Care Transformation</span>
+            <span class="tl-role">Manager, Patient & Community Care Transformation</span>
             <span class="tl-date">Jan 2023 – Sep 2024</span>
-          </div>
-          <div class="tl-company">Triad HealthCare Network (THN) | Remote / Greensboro, NC</div>
-          <ul class="tl-bullets">
-            <li>Oversaw end-to-end program workflows for the Ortho Bundles bundled payment initiative and the THN Concierge service line</li>
-            <li>Led cross-functional teams — clinical, administrative, and community partners — to execute project milestones</li>
-            <li>Developed SOPs, process maps, and workflow documentation to standardize operations and reduce errors</li>
-            <li>Built KPI dashboards and reporting tools to monitor program performance, budget impacts, and operational trends</li>
-            <li>Coordinated with and evaluated external partners and vendors (e.g., Ventricle Health) to support project execution</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <div class="tl-header">
-            <span class="tl-role">Quality Performance Evaluation Specialist</span>
-            <span class="tl-date">Jun 2018 – Jan 2023</span>
-          </div>
-          <div class="tl-company">Triad HealthCare Network (THN) | Hybrid / Greensboro, NC</div>
-          <ul class="tl-bullets">
-            <li>Managed documentation timelines, submission tracking, and compliance verification for NCQA PCMH certification</li>
-            <li>Oversaw service line workflows including complaint triage, call routing, and satisfaction follow-up</li>
-            <li>Analyzed transition-of-care data and produced actionable reports for clinical practices</li>
-            <li>Trained staff on documentation standards, platform use, and workflow protocols</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <div class="tl-header">
-            <span class="tl-role">Administrative Assistant — Quality Informatics &amp; Population Health</span>
-            <span class="tl-date">Jun 2017 – Jun 2018</span>
-          </div>
-          <div class="tl-company">Triad HealthCare Network (THN) | Greensboro, NC</div>
-          <ul class="tl-bullets">
-            <li>Coordinated meetings, agendas, minutes, and follow-up actions across multiple program committees</li>
-            <li>Supported data analysis and reporting for population health initiatives</li>
-            <li>Assisted with care coordination workflows ensuring accurate attribution, documentation, and compliance</li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="section-inner">
-    <p class="section-label">Featured Projects</p>
-    <h2 class="section-title">Programs & Initiatives</h2>
-    <p class="section-sub">High-impact programs designed to improve care delivery, reduce costs, and strengthen population health.</p>
-    <div class="projects-grid">
-
-      <div class="project-card">
-        <div class="project-banner"></div>
-        <div class="project-body">
-          <span class="project-tag">Value-Based Care</span>
-          <h3>Orthopedic Bundle Project</h3>
-          <p>Multi-practice value-based care initiative across four orthopedic practices in a shared accountability model for quality, cost, and patient outcomes. Developed a performance scorecard integrating physician data, procedure completion rates, and complication trends.</p>
-          <div class="project-pills">
-            <span class="pill">Eligibility Auditing</span>
-            <span class="pill">Invoice Oversight</span>
-            <span class="pill">Scorecard Development</span>
-            <span class="pill">Quality Monitoring</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-banner" style="background:linear-gradient(90deg,#1a4a6e,#22a8bd)"></div>
-        <div class="project-body">
-          <span class="project-tag">Population Health</span>
-          <h3>THN Concierge Service Line</h3>
-          <p>Orchestrated the launch and governance of a specialized concierge care program within an ACO managing 260,000 patient lives. Led a targeted initiative aimed at achieving a 10% reduction in preventable ER visits using PatientPing (Bamboo Health) real-time data.</p>
-          <div class="project-pills">
-            <span class="pill">ACO Governance</span>
-            <span class="pill">ED Diversion</span>
-            <span class="pill">PatientPing</span>
-            <span class="pill">KPI Dashboards</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-banner" style="background:linear-gradient(90deg,#0f2744,#e8a020)"></div>
-        <div class="project-body">
-          <span class="project-tag">Care Coordination</span>
-          <h3>Ventricle Health Program</h3>
-          <p>Program manager for a cardiology care coordination initiative supporting patients with complex cardiovascular needs. Served as primary liaison between Ventricle Health, clinical teams, and organizational leadership — overseeing patient eligibility, enrollment, and outcome tracking.</p>
-          <div class="project-pills">
-            <span class="pill">Vendor Liaison</span>
-            <span class="pill">Patient Enrollment</span>
-            <span class="pill">Cardiology</span>
-            <span class="pill">Outcomes Tracking</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-banner" style="background:linear-gradient(90deg,#1a7d8c,#0f2744)"></div>
-        <div class="project-body">
-          <span class="project-tag">Accreditation</span>
-          <h3>PCMH Program</h3>
-          <p>Supported the Patient-Centered Medical Home program by leading operational readiness, documentation, and quality improvement across participating primary care practices. Guided teams through evidence collection, workflow documentation, and readiness assessments for national PCMH standards.</p>
-          <div class="project-pills">
-            <span class="pill">NCQA Accreditation</span>
-            <span class="pill">Quality Metrics</span>
-            <span class="pill">Care Coordination</span>
-            <span class="pill">Documentation</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- TECH SKILLS -->
-<section id="tech">
-  <div class="section-inner">
-    <p class="section-label">Technical Skills</p>
-    <h2 class="section-title">Tools & Platforms</h2>
-    <p class="section-sub">A broad toolkit spanning clinical systems, analytics, and operations platforms.</p>
-    <div class="tech-cats">
-      <div class="tech-cat">
-        <h4>Clinical Systems</h4>
-        <div class="tech-tags">
-          <span class="tech-tag">EPIC (Sorian)</span>
-          <span class="tech-tag">PatientPing</span>
-          <span class="tech-tag">Bamboo Health</span>
-          <span class="tech-tag">Altera</span>
-          <span class="tech-tag">Athena</span>
-          <span class="tech-tag">RescueNet CAD</span>
-          <span class="tech-tag">Picis OR Scheduling</span>
-          <span class="tech-tag">IDX Billing</span>
-        </div>
-      </div>
-      <div class="tech-cat">
-        <h4>Analytics & Reporting</h4>
-        <div class="tech-tags">
-          <span class="tech-tag">Power BI</span>
-          <span class="tech-tag">Excel (Advanced)</span>
-          <span class="tech-tag">Adobe Acrobat</span>
-        </div>
-      </div>
-      <div class="tech-cat">
-        <h4>CRM & Operations</h4>
-        <div class="tech-tags">
-          <span class="tech-tag">Salesforce</span>
-          <span class="tech-tag">Five9 Telephony</span>
-          <span class="tech-tag">Microsoft Office Suite</span>
-          <span class="tech-tag">Word</span>
-          <span class="tech-tag">PowerPoint</span>
-          <span class="tech-tag">Outlook</span>
-        </div>
-      </div>
-      <div class="tech-cat">
-        <h4>Methodologies</h4>
-        <div class="tech-tags">
-          <span class="tech-tag">Six Sigma (White Belt)</span>
-          <span class="tech-tag">Process Mapping</span>
-          <span class="tech-tag">SOP Development</span>
-          <span class="tech-tag">UAT Support</span>
-          <span class="tech-tag">MLR Review</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EDUCATION & CERTS -->
-<section id="education">
-  <div class="section-inner">
-    <p class="section-label">Education & Certifications</p>
-    <h2 class="section-title">Academic & Professional Credentials</h2>
-    <p class="section-sub">Continuous learning across healthcare, technology, and leadership disciplines.</p>
-    <div class="edu-certs-grid">
-      <div>
-        <h3 style="font-size:1rem;color:var(--navy);margin-bottom:1rem;font-weight:700;">Education</h3>
-        <div class="edu-item">
-          <div class="edu-icon">🎓</div>
-          <div>
-            <h4>Bachelor of Science – Healthcare Coordination</h4>
-            <p>Western Governors University · 2020 – 2024</p>
-          </div>
-        </div>
-        <div class="edu-item">
-          <div class="edu-icon">🖥️</div>
-          <div>
-            <h4>Associate of Arts – Information Technology</h4>
-            <p>University of Phoenix · 2011 – 2013</p>
-          </div>
-        </div>
-      </div>
-      <div>
-        <h3 style="font-size:1rem;color:var(--navy);margin-bottom:1rem;font-weight:700;">Licenses & Certifications</h3>
-        <div class="cert-item">
-          <div class="edu-icon">⚡</div>
-          <div>
-            <h4>Six Sigma: White Belt</h4>
-            <p>Process Improvement Methodology</p>
-          </div>
-        </div>
-        <div class="cert-item">
-          <div class="edu-icon">📋</div>
-          <div>
-            <h4>Train the Trainer Certification</h4>
-            <p>Adult Learning &amp; Facilitation</p>
-          </div>
-        </div>
-        <div class="cert-item">
-          <div class="edu-icon">📊</div>
-          <div>
-            <h4>Power BI: Dashboards for Beginners</h4>
-            <p>Data Visualization &amp; Analytics</p>
-          </div>
-        </div>
-        <div class="cert-item">
-          <div class="edu-icon">☁️</div>
-          <div>
-            <h4>Salesforce Essential Training</h4>
-            <p>CRM Platform Proficiency</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="section-inner">
-    <p class="section-label">Contact</p>
-    <h2 class="section-title">Let's Connect</h2>
-    <p class="section-sub">Open to new opportunities in healthcare program management, operations, and value-based care strategy.</p>
-    <div class="contact-cards">
-      <div class="contact-card">
-        <div class="contact-card-icon">✉️</div>
-        <h4>Email</h4>
-        <a href="mailto:mnettles360@gmail.com">mnettles360@gmail.com</a>
-      </div>
-      <div class="contact-card">
-        <div class="contact-card-icon">📞</div>
-        <h4>Phone</h4>
-        <p>336-339-1901</p>
-      </div>
-      <div class="contact-card">
-        <div class="contact-card-icon">📍</div>
-        <h4>Location</h4>
-        <p>Greensboro, NC</p>
-      </div>
-      <div class="contact-card">
-        <div class="contact-card-icon">💼</div>
-        <h4>LinkedIn</h4>
-        <a href="https://www.linkedin.com/in/melissa-n-9b666360" target="_blank">melissa-n-9b666360</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 <span>Melissa Nettles</span> · Healthcare Operations & Program Management · Greensboro, NC</p>
-</footer>
-
-</body>
-</html>
+          </div
